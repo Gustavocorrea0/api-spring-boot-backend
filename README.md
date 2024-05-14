@@ -8,5 +8,7 @@ Language: [Java 17 or higher](https://www.oracle.com/br/java/technologies/downlo
 
 ## How to use project
 <a>Clone project with comando in bash: git clone https://github.com/Gustavocorrea0/api-spring-boot-backend.git </a>
+<br>
 <a>Extract the project with zip<a/>
+<br>
 <a>Open IntelliJ IDEA<a/>
