@@ -3,7 +3,7 @@
 ## Required tools
 IDEA: [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/?section=windows) &nbsp;&middot;&nbsp; <br>
 API Testing: [Postman](https://www.postman.com/downloads/) &nbsp;&middot;&nbsp; <br>
-Database: [PgAdmin 4](https://www.pgadmin.org/download/) &nbsp;&middot;&nbsp; <br>
+Database(POSTGRESQL): [PgAdmin 4](https://www.pgadmin.org/download/) &nbsp;&middot;&nbsp; <br>
 Language: [Java 17 or higher](https://www.oracle.com/br/java/technologies/downloads/) &nbsp;&middot;&nbsp; 
 
 ## How to use project
