@@ -12,7 +12,7 @@ Language: [Java 17 or higher](https://www.oracle.com/br/java/technologies/downlo
 <a>2 - Extract the project with zip<a/>
 <br>
 <a>3 - Open IntelliJ IDEA and clink in "OPEN"<a/> <br><br>
-<img width="500px" src="./HowToUseAPI/intellij_IDEA_open_project.png">
+<img width="500px" src="./HowToUseAPI/intellij_IDEA_open_project.png"> <br><br>
 <a>4 - Select the folder to which the project was extracted and select the "pom.xml" file and click "OK"<a/> <br><br>
-<img width="500px" src="./HowToUseAPI/intellij_IDEA_open_project_2.png">
+<img width="500px" src="./HowToUseAPI/intellij_IDEA_open_project_2.png"><br><br>
 <a>5 - Wait for the dependencies to be installed<a/> <br><br>
