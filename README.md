@@ -11,6 +11,6 @@ Language: [Java 17 or higher](https://www.oracle.com/br/java/technologies/downlo
 <br>
 <a>2 - Extract the project with zip<a/>
 <br>
-<a>3 - Open IntelliJ IDEA<a/>
-<img width="200px" src="./HowToUseAPI/intellij_IDEA_open_project.png">
+<a>3 - Open IntelliJ IDEA<a/> <br>
+<img width="500px" src="./HowToUseAPI/intellij_IDEA_open_project.png">
 
