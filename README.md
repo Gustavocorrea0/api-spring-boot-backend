@@ -7,8 +7,8 @@ Database: [PgAdmin 4](https://www.pgadmin.org/download/) &nbsp;&middot;&nbsp;
 Language: [Java 17 or higher](https://www.oracle.com/br/java/technologies/downloads/) &nbsp;&middot;&nbsp; 
 
 ## How to use project
-<a>Clone project with comando in bash: git clone https://github.com/Gustavocorrea0/api-spring-boot-backend.git </a>
+<a>1 - Clone project with comando in bash: git clone https://github.com/Gustavocorrea0/api-spring-boot-backend.git </a>
 <br>
-<a>Extract the project with zip<a/>
+<a>2 - Extract the project with zip<a/>
 <br>
-<a>Open IntelliJ IDEA<a/>
+<a>3 - Open IntelliJ IDEA<a/>
