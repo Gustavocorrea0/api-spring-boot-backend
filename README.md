@@ -42,4 +42,4 @@ Language: [Java 17 or higher](https://www.oracle.com/br/java/technologies/downlo
 <img width="500px" src="./HowToUseAPI/postman_exec_DELETE.png"><br><br>
 
 ## Thank you for accessing my project
-My Linkedln: [Linkedln](www.linkedin.com/in/gustavo-correa00) &nbsp;&middot;&nbsp; <br>
+My Linkedln: [Linkedln](https://www.linkedin.com/in/gustavo-correa00/) &nbsp;&middot;&nbsp; 
