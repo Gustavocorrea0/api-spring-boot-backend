@@ -49,4 +49,25 @@ public class MusicController {
         }
         return ResponseEntity.status(HttpStatus.OK).body(musicList);
     }
+
+    @PutMapping("/update-music/{id}")
+    public ResponseEntity<Object> updateMusic(@PathVariable(value = "id") UUID id, @RequestBody @Valid MusicRecordDtos musicRecordDtos){
+        Optional<MusicModel> musicM = musicRepository.findById(id);
+        if (musicM.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Music not found");
+        }
+        var musicModel = musicM.get();
+        BeanUtils.copyProperties(musicRecordDtos, musicModel);
+        return ResponseEntity.status(HttpStatus.OK).body(musicRepository.save(musicModel));
+    }
+
+    @DeleteMapping("/delete-music/{id}")
+    public ResponseEntity<Object> deleteMusic(@PathVariable(value = "id") UUID id){
+        Optional<MusicModel> musicM = musicRepository.findById(id);
+        if (musicM.isEmpty()){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Music not found");
+        }
+        musicRepository.delete(musicM.get());
+        return ResponseEntity.status(HttpStatus.OK).body("Music removed successfully");
+    }
 }
