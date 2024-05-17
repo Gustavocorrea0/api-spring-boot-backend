@@ -17,20 +17,19 @@ import java.util.UUID;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-
 @RestController
 public class CarController {
     @Autowired
     CarRepository carRepository;
 
-    @PostMapping("/cadastrar-carro")
+    @PostMapping("/add-car")
     public ResponseEntity<CarModel> saveNewCar(@RequestBody @Valid CarRecordDto carRecordDto) {
         var carModel = new CarModel();
         BeanUtils.copyProperties(carRecordDto, carModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(carRepository.save(carModel));
     }
 
-    @GetMapping("/listar-carro/todos")
+    @GetMapping("/list-cars/all")
     public ResponseEntity<List<CarModel>> getAllCars() {
         List<CarModel> carsList = carRepository.findAll();
         if (!carsList.isEmpty()) {
@@ -42,17 +41,24 @@ public class CarController {
         return ResponseEntity.status(HttpStatus.OK).body(carsList);
     }
 
-    @GetMapping("/listar-carro/{id}")
+    @GetMapping("/list-cars/{id}")
     public ResponseEntity<Object> getOneCar(@PathVariable(value = "id") UUID id) {
         Optional<CarModel> carSearch = carRepository.findById(id);
         if (carSearch.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Car not found");
         }
         carSearch.get().add(linkTo(methodOn(CarController.class).getAllCars()).withRel("Car list"));
         return ResponseEntity.status(HttpStatus.OK).body(carSearch.get());
     }
 
-    @PutMapping("/atualizar-carro/{id}")
+    //parei aqui
+    /*
+    @GetMapping("/listar-carro/{carName}")
+    public ResponseEntity<Object> getOneCarWithName(@PathVariable(value = "nameCar") String nameCar){
+        Optional<CarModel> carM = carRepository.findByNameCar(nameCar);
+    }
+*/
+    @PutMapping("/update-car/{id}")
     public ResponseEntity<Object> updateCar(@PathVariable(value = "id") UUID id, @RequestBody @Valid CarRecordDto carRecordDto) {
         Optional<CarModel> carM = carRepository.findById(id);
         if (carM.isEmpty()){
@@ -63,7 +69,7 @@ public class CarController {
         return ResponseEntity.status(HttpStatus.OK).body(carRepository.save(carModel));
     }
 
-    @DeleteMapping("/remover-carro/{id}")
+    @DeleteMapping("/remove-car/{id}")
     public ResponseEntity<Object> deleteCar(@PathVariable(value = "id") UUID id){
         Optional<CarModel> carM = carRepository.findById(id);
         if (carM.isEmpty()){

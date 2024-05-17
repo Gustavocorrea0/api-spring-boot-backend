@@ -7,5 +7,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface CarRepository extends JpaRepository<CarModel, UUID> {
-    //Optional<CarModel> findByNameCar(String car); //Buscar por nome
+    Optional<CarModel> findByNameCar(String nameCar);
 }
+
